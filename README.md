@@ -44,13 +44,16 @@ Start the local development server
 
 You can now access the server at http://localhost:8000
 
-##Routes
+## Routes
 
-#server_url: http://localhost:8000
+----------
 
-#Register in the aplication:
 
+# server_url: http://localhost:8000
+
+Register in the aplication:
     /api/v1/register
+
         Method: POST
         Body: {
             "name": Required,
@@ -63,8 +66,8 @@ You can now access the server at http://localhost:8000
         }
 
 log in:
-
     /oauth/token
+
         Method: POST
         Body: {
             "grant_type": "password",
@@ -80,8 +83,8 @@ log in:
 User Routes:
 
 List all users
-
     /api/v1/users
+
         Method: GET
         Header: {
             Accept: application/json,
