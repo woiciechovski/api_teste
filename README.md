@@ -43,3 +43,55 @@ Start the local development server
     php artisan serve
 
 You can now access the server at http://localhost:8000
+
+Routes
+
+server_url: http://localhost:8000
+
+Register in the aplication:
+    /api/v1/register
+        Method: POST
+        Body: {
+            "name": Required,
+            "email" Required,
+            "password" Required,
+            "phone" Required
+            }
+        Response: {
+            "access_token": "string",
+        }
+
+log in:
+    /oauth/token
+        Method: POST
+        Body: {
+            "grant_type": "password",
+            "client_id": 2,
+            "client_secret": client_secret (**switch to the generated client_secret**),
+            "email" Required,
+            "password" Required
+            }
+        Response: {
+            "access_token": "string",
+        }
+
+User Routes:
+
+List all users
+    /api/v1/users
+        Method: GET
+        Header: {
+            Accept: application/json,
+            Authorization: Bearer {access_token}
+            }
+        Response: {
+            "id": 1,
+            "name": "string",
+            "email": "string",
+            "phone": "string",
+            "created_at": "2020-05-05 12:12:12",
+            "updated_at": "2020-05-05 12:12:12"
+        }
+
+
+
