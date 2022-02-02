@@ -44,11 +44,11 @@ Start the local development server
 
 You can now access the server at http://localhost:8000
 
-Routes
+##Routes
 
-server_url: http://localhost:8000
+#server_url: http://localhost:8000
 
-Register in the aplication:
+#Register in the aplication:
     /api/v1/register
         Method: POST
         Body: {
