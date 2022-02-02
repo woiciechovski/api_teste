@@ -44,12 +44,10 @@ Start the local development server
 
 You can now access the server at http://localhost:8000
 
-## Routes
-
 ----------
 
+## Routes
 
-# server_url: http://localhost:8000
 
 Register in the aplication:
     /api/v1/register
@@ -82,7 +80,7 @@ log in:
 
 # User Routes:
 
-List all users
+# List all users:
     /api/v1/users
 
         Method: GET
@@ -99,5 +97,97 @@ List all users
             "updated_at": "2020-05-05 12:12:12"
         }
 
+# Register one user:
 
+    /api/v1/users
+
+        Method: POST
+        Header: {
+            Accept: application/json,
+            Authorization: Bearer {access_token}
+            }
+        Body: {
+            "name": Required,
+            "email" Required,
+            "password" Required,
+            "phone" Required,
+            "photo" Not required
+            }
+        Response: {
+            "id": 1,
+            "name": "string",
+            "email": "string",
+            "phone": "string",
+            "photo_name": "string",
+            "photo_path": "string",
+            "created_at": "2020-05-05 12:12:12",
+            "updated_at": "2020-05-05 12:12:12"
+        }
+
+# List one User
+    
+        /api/v1/users/{id}
+    
+            Method: GET
+            Header: {
+                Accept: application/json,
+                Authorization: Bearer {access_token}
+                }
+            Response: {
+                "id": 1,
+                "name": "string",
+                "email": "string",
+                "phone": "string",
+                "photo_name": "string",
+                "photo_path": "string",
+                "created_at": "2020-05-05 12:12:12",
+                "updated_at": "2020-05-05 12:12:12"
+            }
+
+# Edit one User
+
+        /api/v1/users/{id}
+    
+            Method: PUT
+            Header: {
+                Accept: application/json,
+                Authorization: Bearer {access_token}
+                }
+            Body: {
+                "name": Required,
+                "email" Required,
+                "password" Required,
+                "phone" Required,
+                "photo" Not required
+                }
+            Response: {
+                "id": 1,
+                "name": "string",
+                "email": "string",
+                "phone": "string",
+                "photo_name": "string",
+                "photo_path": "string",
+                "created_at": "2020-05-05 12:12:12",
+                "updated_at": "2020-05-05 12:12:12"
+            }
+
+# Delete one User
+
+        /api/v1/users/{id}
+    
+            Method: DELETE
+            Header: {
+                Accept: application/json,
+                Authorization: Bearer {access_token}
+                }
+            Response: {
+                "id": 1,
+                "name": "string",
+                "email": "string",
+                "phone": "string",
+                "photo_name": "string",
+                "photo_path": "string",
+                "created_at": "2020-05-05 12:12:12",
+                "updated_at": "2020-05-05 12:12:12"
+            }
 
