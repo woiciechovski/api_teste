@@ -49,6 +49,7 @@ You can now access the server at http://localhost:8000
 #server_url: http://localhost:8000
 
 #Register in the aplication:
+
     /api/v1/register
         Method: POST
         Body: {
@@ -62,6 +63,7 @@ You can now access the server at http://localhost:8000
         }
 
 log in:
+
     /oauth/token
         Method: POST
         Body: {
@@ -78,6 +80,7 @@ log in:
 User Routes:
 
 List all users
+
     /api/v1/users
         Method: GET
         Header: {
