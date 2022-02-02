@@ -29,11 +29,14 @@ Create the database sqlite file
 
     cp database/database.sqlite.example database/database.sqlite
 
+Run the database migrations
 
-Run laravel passport installation
-this operation will do the database migrations (**Set the database connection in .env before migrating**)
+    php artisan migrate
 
-    php artisan passport:install --uuids
+
+Run laravel passport install
+
+    php artisan passport:install
 
 Start the local development server
 
