@@ -80,9 +80,9 @@ log in:
 
 # User Routes:
 
-# List all users:
-    /api/v1/users
+List all users:
 
+    /api/v1/users
         Method: GET
         Header: {
             Accept: application/json,
@@ -97,10 +97,10 @@ log in:
             "updated_at": "2020-05-05 12:12:12"
         }
 
-# Register one user:
+Register one user:
+
 
     /api/v1/users
-
         Method: POST
         Header: {
             Accept: application/json,
@@ -124,10 +124,10 @@ log in:
             "updated_at": "2020-05-05 12:12:12"
         }
 
-# List one User
+List one User
+    
     
         /api/v1/users/{id}
-    
             Method: GET
             Header: {
                 Accept: application/json,
@@ -144,10 +144,9 @@ log in:
                 "updated_at": "2020-05-05 12:12:12"
             }
 
-# Edit one User
+Edit one User
 
         /api/v1/users/{id}
-    
             Method: PUT
             Header: {
                 Accept: application/json,
@@ -171,23 +170,22 @@ log in:
                 "updated_at": "2020-05-05 12:12:12"
             }
 
-# Delete one User
+Delete one User
 
-        /api/v1/users/{id}
-    
-            Method: DELETE
-            Header: {
-                Accept: application/json,
-                Authorization: Bearer {access_token}
-                }
-            Response: {
-                "id": 1,
-                "name": "string",
-                "email": "string",
-                "phone": "string",
-                "photo_name": "string",
-                "photo_path": "string",
-                "created_at": "2020-05-05 12:12:12",
-                "updated_at": "2020-05-05 12:12:12"
+    /api/v1/users/{id}
+        Method: DELETE
+        Header: {
+            Accept: application/json,
+            Authorization: Bearer {access_token}
             }
+        Response: {
+            "id": 1,
+            "name": "string",
+            "email": "string",
+            "phone": "string",
+            "photo_name": "string",
+            "photo_path": "string",
+            "created_at": "2020-05-05 12:12:12",
+            "updated_at": "2020-05-05 12:12:12"
+        }
 
